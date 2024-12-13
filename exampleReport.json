@@ -1,0 +1,47 @@
+[
+    {
+        "testID": 0,
+        "testType": "sql_injection",
+        "passed": "True"
+    },
+    {
+        "testID": 1,
+        "testType": "sql_injection",
+        "passed": "False"
+    },
+    {
+        "testID": 2,
+        "testType": "cmd_injection",
+        "passed": "True"
+    },
+    {
+        "testID": 3,
+        "testType": "authenticated_endpoint",
+        "passed": "True"
+    },
+    {
+        "testID": 4,
+        "testType": "encrypted_connection",
+        "passed": "True"
+    },
+    {
+        "testID": 5,
+        "testType": "status_code_analysis",
+        "passed": "True"
+    },
+    {
+        "testID": 6,
+        "testType": "authenticated_endpoint",
+        "passed": "True"
+    },
+    {
+        "testID": 7,
+        "testType": "file_size_validation",
+        "passed": "True"
+    },
+    {
+        "testID": 8,
+        "testType": "file_type_validation",
+        "passed": "True"
+    }
+]

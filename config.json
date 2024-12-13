@@ -1,0 +1,5 @@
+{
+    "api_spec_path": "example_open_api.yaml",
+    "stop_on_failure": 0,
+    "url_index": 0
+}

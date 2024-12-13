@@ -4,33 +4,118 @@
 <head>
     <title>Vulnerability Report</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; } */
+        h1 {
+            color: #58a6ff;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #161b22;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #30363d;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #238636;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* tr:nth-child(even) {
+            background-color: #21262d;
+        } */
+
+        tr:hover {
+            background-color: #30363d;
+        }
+
+        td {
+            font-size: 16px;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Conditional Styling */
+        .all-passed {
+            background-color: #27ae60; /* Green for all passed */
+            color: white;
+            font-weight: bold;
+        }
+
+        .not-all-passed {
+            background-color: #e74c3c; /* Red for some failed */
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Hidden Details */
+        .test-details {
+            display: none;
+            padding: 10px;
+            background-color: #2d333b;
+            color: #58a6ff;
+            border: 1px solid #30363d;
+        }
     </style>
+    <script>
+        function toggleDetails(row) {
+            var details = row.querySelector('.test-details');
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1>Vulnerability Report</h1>
     <table>
+        <caption>Summary of Test Results</caption>
         <thead>
             <tr>
-                <th>Vulnerability type</th>
-                <th>Tests passed</th>
+                <th>Vulnerability Type</th>
+                <th>Tests Passed</th>
             </tr>
         </thead>
         <tbody>
-            {% for name, testsPassed, testsTotal in data %}
-            <tr>
+            {% for name, testsPassed, testsTotal, endpoint, description in data %}
+            <tr class="{% if testsPassed == testsTotal %}all-passed{% else %}not-all-passed{% endif %}" onclick="toggleDetails(this)">
                 <td>{{ name }}</td>
                 <td>{{ testsPassed }}/{{ testsTotal }}</td>
+                <!-- Hidden details that will toggle when clicked -->
+                <td class="test-details">
+                    {% for endpoint, description in zip(endpoints, descriptions) %}
+                        <strong>Endpoint:</strong> {{ endpoint }}<br>
+                        <strong>Description:</strong> {{ description }}<br><br>
+                    {% endfor %}
+                </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </body>
+
+</html>

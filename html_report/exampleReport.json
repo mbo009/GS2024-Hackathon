@@ -1,0 +1,65 @@
+[
+    {
+        "testID": 0,
+        "testType": "sql_injection",
+        "passed": true,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 1,
+        "testType": "sql_injection",
+        "passed": false,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 2,
+        "testType": "cmd_injection",
+        "passed": true,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 3,
+        "testType": "authenticated_endpoint",
+        "passed": true,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 4,
+        "testType": "encrypted_connection",
+        "passed": false,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 5,
+        "testType": "status_code_analysis",
+        "passed": true,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 6,
+        "testType": "authenticated_endpoint",
+        "passed": true,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 7,
+        "testType": "file_size_validation",
+        "passed": true,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    },
+    {
+        "testID": 8,
+        "testType": "file_type_validation",
+        "passed": false,
+        "endpoint": "/login",
+        "description": "x value passed to y field"
+    }
+]

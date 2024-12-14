@@ -38,20 +38,18 @@ jobs:
         echo "Running Python App Container..."
         docker run -d --name python-app-container python-app
 
-    
+    - name: Upload Generated Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: generated-report
+        path: generatedReport.html
+        
     # Step 5: Verify All Containers are Running
     - name: Check Running Containers
       run: docker ps
 
-    # Step 6: Template Action 1 (Placeholder)
-    - name: Template Action 1
-      run: echo "Template Action 1 passed."
-
-    # Step 7: Template Action 2 (Placeholder)
-    - name: Template Action 2
-      run: echo "Template Action 2 passed."
-
-    # Step 8: Tear Down Containers
+    # Step 6: Tear Down Containers
     - name: Tear Down Containers
       if: always()
       run: |
@@ -59,4 +57,5 @@ jobs:
         docker stop python-app-container || true
         docker rm python-app-container || true
         docker-compose -f vulnerableAPI/docker-compose.yaml down
+    
 

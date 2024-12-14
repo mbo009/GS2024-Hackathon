@@ -14,27 +14,18 @@ def group_tests(tests):
     for test in tests:
         test_type = test["testType"]
         if test_type not in grouped_data:
-            grouped_data[test_type] = {
-                "testsPassed": 0,
-                "testsTotal": 0,
-                "endpoint": [],
-                "description": [],
-            }
+            grouped_data[test_type] = {"testsPassed": 0, "testsTotal": 0, "details": []}
         grouped_data[test_type]["testsTotal"] += 1
         if test["passed"]:
             grouped_data[test_type]["testsPassed"] += 1
-            grouped_data[test_type]["endpoint"].append(test["endpoint"])
-            grouped_data[test_type]["description"].append(test["description"])
+
+        grouped_data[test_type]["details"].append(
+            (test["endpoint"], test["description"])
+        )
     pprint(grouped_data)
 
     return [
-        (
-            key,
-            value["testsPassed"],
-            value["testsTotal"],
-            value["endpoint"],
-            value["description"],
-        )
+        (key, value["testsPassed"], value["testsTotal"], value["details"])
         for key, value in grouped_data.items()
     ]
 

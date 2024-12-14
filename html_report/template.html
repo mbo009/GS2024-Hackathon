@@ -101,13 +101,13 @@
             </tr>
         </thead>
         <tbody>
-            {% for name, testsPassed, testsTotal, endpoint, description in data %}
+            {% for name, testsPassed, testsTotal, details in data %}
             <tr class="{% if testsPassed == testsTotal %}all-passed{% else %}not-all-passed{% endif %}" onclick="toggleDetails(this)">
                 <td>{{ name }}</td>
                 <td>{{ testsPassed }}/{{ testsTotal }}</td>
                 <!-- Hidden details that will toggle when clicked -->
                 <td class="test-details">
-                    {% for endpoint, description in zip(endpoints, descriptions) %}
+                    {% for endpoint, description in details %}
                         <strong>Endpoint:</strong> {{ endpoint }}<br>
                         <strong>Description:</strong> {{ description }}<br><br>
                     {% endfor %}

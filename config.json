@@ -1,5 +1,9 @@
 {
     "api_spec_path": "example_open_api.yaml",
     "stop_on_failure": 0,
-    "url_index": 0
+    "url_index": 0,
+    "status_code_validation": "strict",
+    "dos_request_count": 1000,
+    "max_acceptable_response_time": 5,
+    "endpoints_without_auth": ["/login", "/register", "/home", "/", "/index", "/info", "/about"]
 }

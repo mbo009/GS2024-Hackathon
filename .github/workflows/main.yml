@@ -23,8 +23,14 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y docker-compose
-
-    # Step 3: Build and Run the Python App from Dockerfile
+        
+    # Step 3: Run Docker Compose Services
+    - name: Run Docker Compose
+      working-directory: ./vulnerableAPI  # Ensure docker-compose.yml is in this folder
+      run: |
+        docker-compose up -d
+        
+    # Step 4 Build and Run the Python App from Dockerfile
     - name: Build and Run Python App
       run: |
         echo "Building Python Docker Image..."
@@ -32,12 +38,7 @@ jobs:
         echo "Running Python App Container..."
         docker run -d --name python-app-container python-app
 
-    # Step 4: Run Docker Compose Services
-    - name: Run Docker Compose Services
-      working-directory: /vulnerableAPI  # Ensure the compose file is in the 'via' folder
-      run: |
-        docker-compose up -d
-
+    
     # Step 5: Verify All Containers are Running
     - name: Check Running Containers
       run: docker ps

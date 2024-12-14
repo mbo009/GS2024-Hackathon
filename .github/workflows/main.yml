@@ -1,0 +1,60 @@
+name: Run Python App and Docker Compose Services
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-containers:
+    name: Run Python App and Compose Services
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Install Docker Compose
+    - name: Set up Docker Compose
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y docker-compose
+
+    # Step 3: Build and Run the Python App from Dockerfile
+    - name: Build and Run Python App
+      run: |
+        echo "Building Python Docker Image..."
+        docker build -t python-app -f Dockerfile .
+        echo "Running Python App Container..."
+        docker run -d --name python-app-container python-app
+
+    # Step 4: Run Docker Compose Services
+    - name: Run Docker Compose Services
+      working-directory: /vulnerableAPI  # Ensure the compose file is in the 'via' folder
+      run: |
+        docker-compose up -d
+
+    # Step 5: Verify All Containers are Running
+    - name: Check Running Containers
+      run: docker ps
+
+    # Step 6: Template Action 1 (Placeholder)
+    - name: Template Action 1
+      run: echo "Template Action 1 passed."
+
+    # Step 7: Template Action 2 (Placeholder)
+    - name: Template Action 2
+      run: echo "Template Action 2 passed."
+
+    # Step 8: Tear Down Containers
+    - name: Tear Down Containers
+      if: always()
+      run: |
+        echo "Stopping and removing all containers..."
+        docker stop python-app-container || true
+        docker rm python-app-container || true
+        docker-compose -f ./via/docker-compose.yml down

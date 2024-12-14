@@ -89,6 +89,17 @@
             font-size: 18px; /* Larger font for strong text */
         }
 
+        /* Passed and Failed Status Styling */
+        .status-passed {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .status-failed {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
         /* Ensuring smooth toggling */
         tr {
             cursor: pointer;
@@ -126,7 +137,10 @@
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> all<br>
-                        <strong>Description:</strong> Checking if application has authorization security methods implemented<br><br>
+                        <strong>Description:</strong> Checking if application has authorization security methods implemented<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                 </td>
             </tr>
@@ -139,7 +153,10 @@
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> all<br>
-                        <strong>Description:</strong> Checking if connection has https encryption<br><br>
+                        <strong>Description:</strong> Checking if connection has https encryption<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                 </td>
             </tr>
@@ -152,46 +169,88 @@
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> /createdb<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.10273159199982729s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.11121737500002382s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004260563000116235s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.0040414490000557635s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.005348924999907467s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.00514225400002033s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/_debug<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004632838000134143s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.0051169470000331785s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/register<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.006936273999826881s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.006588084999975763s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/login<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.007081127999981618s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.0057842680000703695s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /me<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004394806999926004s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004051570000001448s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.00461399400001028s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.00434241599998586s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004948550999870349s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.003847382000003563s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/email<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004476782999972784s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.005086802000050739s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/password<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004036353999936182s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.00403445400002056s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.006231303000049593s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.005921357000033822s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.003896891999829677s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004534914000032586s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1/{book_title}<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004484374999947249s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.00438331800000924s.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                 </td>
             </tr>
@@ -204,46 +263,88 @@
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> /createdb<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/_debug<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/register<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/login<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /me<br>
-                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br><br>
+                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br><br>
+                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/email<br>
-                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br><br>
+                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/password<br>
-                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br><br>
+                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> endpoint accessible without authentication as expected<br><br>
+                        <strong>Description:</strong> endpoint accessible without authentication as expected<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br><br>
+                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1/{book_title}<br>
-                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br><br>
+                        <strong>Description:</strong> access not denied. if this is not unexpected behavior consider adding it's path in the config file.<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                 </td>
             </tr>
@@ -256,67 +357,130 @@
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> http://localhost:5000/createdb<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/_debug<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/me<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/me<br>
-                        <strong>Description:</strong> Expected status code: 401, received code: 200 <br><br>
+                        <strong>Description:</strong> Expected status code: 401, received code: 200 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 404 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 404 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 404, received code: 404 <br><br>
+                        <strong>Description:</strong> Expected status code: 404, received code: 404 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 401 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 401 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 401, received code: 401 <br><br>
+                        <strong>Description:</strong> Expected status code: 401, received code: 401 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 404, received code: 401 <br><br>
+                        <strong>Description:</strong> Expected status code: 404, received code: 401 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test/email<br>
-                        <strong>Description:</strong> Expected status code: 204, received code: 400 <br><br>
+                        <strong>Description:</strong> Expected status code: 204, received code: 400 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test/email<br>
-                        <strong>Description:</strong> Expected status code: 400, received code: 400 <br><br>
+                        <strong>Description:</strong> Expected status code: 400, received code: 400 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test/email<br>
-                        <strong>Description:</strong> Expected status code: 401, received code: 400 <br><br>
+                        <strong>Description:</strong> Expected status code: 401, received code: 400 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test/password<br>
-                        <strong>Description:</strong> Expected status code: 204, received code: 400 <br><br>
+                        <strong>Description:</strong> Expected status code: 204, received code: 400 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test/password<br>
-                        <strong>Description:</strong> Expected status code: 400, received code: 400 <br><br>
+                        <strong>Description:</strong> Expected status code: 400, received code: 400 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/users/v1/test/password<br>
-                        <strong>Description:</strong> Expected status code: 401, received code: 400 <br><br>
+                        <strong>Description:</strong> Expected status code: 401, received code: 400 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/books/v1<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 200 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/books/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 200, received code: 404 <br><br>
+                        <strong>Description:</strong> Expected status code: 200, received code: 404 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/books/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 401, received code: 404 <br><br>
+                        <strong>Description:</strong> Expected status code: 401, received code: 404 <br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> http://localhost:5000/books/v1/test<br>
-                        <strong>Description:</strong> Expected status code: 404, received code: 404 <br><br>
+                        <strong>Description:</strong> Expected status code: 404, received code: 404 <br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                 </td>
             </tr>
@@ -329,46 +493,88 @@
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> /createdb<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/_debug<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/register<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/login<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /me<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> Possible SQL Injection Detected! Payload: ' UNION SELECT null, null, null--<br><br>
+                        <strong>Description:</strong> Possible SQL Injection Detected! Payload: ' UNION SELECT null, null, null--<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/email<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/password<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br><br>
+                        <strong>Description:</strong> No SQL injections detected, vulnerabilities not found.<br>
+                        <strong>Status:</strong> <span class="status-passed">
+                            Passed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1/{book_title}<br>
-                        <strong>Description:</strong> Possible SQL Injection Detected! Payload: ' OR 1=1--<br><br>
+                        <strong>Description:</strong> Possible SQL Injection Detected! Payload: ' OR 1=1--<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                 </td>
             </tr>
@@ -381,13 +587,22 @@
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> /users/v1/register<br>
-                        <strong>Description:</strong> Testing if server has error codes that ensure limiting data sizes<br><br>
+                        <strong>Description:</strong> Testing if server has error codes that ensure limiting data sizes<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/login<br>
-                        <strong>Description:</strong> Testing if server has error codes that ensure limiting data sizes<br><br>
+                        <strong>Description:</strong> Testing if server has error codes that ensure limiting data sizes<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> Testing if server has error codes that ensure limiting data sizes<br><br>
+                        <strong>Description:</strong> Testing if server has error codes that ensure limiting data sizes<br>
+                        <strong>Status:</strong> <span class="status-failed">
+                            Failed
+                        </span><br><br>
                     
                 </td>
             </tr>

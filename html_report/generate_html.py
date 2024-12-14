@@ -20,7 +20,7 @@ def group_tests(tests):
             grouped_data[test_type]["testsPassed"] += 1
 
         grouped_data[test_type]["details"].append(
-            (test["endpoint"], test["description"])
+            (test["endpoint"], test["description"], test["passed"])
         )
     pprint(grouped_data)
 

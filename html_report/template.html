@@ -89,6 +89,17 @@
             font-size: 18px; /* Larger font for strong text */
         }
 
+        /* Passed and Failed Status Styling */
+        .status-passed {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .status-failed {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
         /* Ensuring smooth toggling */
         tr {
             cursor: pointer;
@@ -124,9 +135,12 @@
             </tr>
             <tr class="test-details">
                 <td colspan="2">
-                    {% for endpoint, description in details %}
+                    {% for endpoint, description, passed in details %}
                         <strong>Endpoint:</strong> {{ endpoint }}<br>
-                        <strong>Description:</strong> {{ description }}<br><br>
+                        <strong>Description:</strong> {{ description }}<br>
+                        <strong>Status:</strong> <span class="{% if passed %}status-passed{% else %}status-failed{% endif %}">
+                            {% if passed %}Passed{% else %}Failed{% endif %}
+                        </span><br><br>
                     {% endfor %}
                 </td>
             </tr>

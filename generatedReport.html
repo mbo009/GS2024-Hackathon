@@ -8,14 +8,15 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #0d1117;
+            background-color: #161b22;
             color: #c9d1d9;
             transition: background-color 0.3s, color 0.3s;
         }
 
         h1 {
-            color: #58a6ff;
+            color: #eddeff;
             text-align: center;
+            font-size: 36px; /* Larger title */
         }
 
         table {
@@ -24,18 +25,22 @@
             border-collapse: collapse;
             background-color: #161b22;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         th, td {
             border: 1px solid #30363d;
-            padding: 12px;
+            padding: 16px; /* Increased padding */
             text-align: center;
+            font-size: 18px; /* Larger text in table cells */
         }
 
         th {
-            background-color: #238636;
+            background-color: #bc8cff;
             color: white;
             font-weight: bold;
+            font-size: 20px; /* Larger text in header */
         }
 
         tr:hover {
@@ -43,44 +48,45 @@
         }
 
         td {
-            font-size: 16px;
+            font-size: 18px; /* Larger text in table data cells */
         }
 
         caption {
             caption-side: top;
-            font-size: 18px;
+            font-size: 22px; /* Larger caption */
             margin-bottom: 10px;
         }
 
         /* Conditional Styling */
         .all-passed {
-            background-color: #27ae60; /* Green for all passed */
-            color: white;
+            color: #27ae60;
             font-weight: bold;
+            font-size: 18px; /* Larger font for passed tests */
         }
 
         .not-all-passed {
-            background-color: #e74c3c; /* Red for some failed */
-            color: white;
+            color: #e74c3c;
             font-weight: bold;
+            font-size: 18px; /* Larger font for failed tests */
         }
 
         /* Styling for hidden details */
         .test-details {
             background-color: #2d333b;
             color: #58a6ff;
-            padding: 15px;
-            font-size: 14px;
+            padding: 20px; /* Increased padding */
+            font-size: 16px; /* Larger font in details */
             display: none;
             text-align: left;
         }
 
         .test-details td {
-            padding-left: 30px; /* Indentation to make it look like nested content */
+            padding-left: 30px;
         }
 
         .test-details strong {
             color: #c9d1d9;
+            font-size: 18px; /* Larger font for strong text */
         }
 
         /* Ensuring smooth toggling */
@@ -90,11 +96,11 @@
     </style>
     <script>
         function toggleDetails(row) {
-            var details = row.nextElementSibling; // Get the next sibling (the details row)
+            var details = row.nextElementSibling;
             if (details.style.display === 'none' || details.style.display === '') {
-                details.style.display = 'table-row'; // Display the details as a row
+                details.style.display = 'table-row';
             } else {
-                details.style.display = 'none'; // Hide the details
+                details.style.display = 'none';
             }
         }
     </script>
@@ -112,11 +118,10 @@
         </thead>
         <tbody>
             
-            <tr class="all-passed" onclick="toggleDetails(this)">
+            <tr onclick="toggleDetails(this)">
                 <td>auth_exists</td>
-                <td>1/1</td>
+                <td class="all-passed">1/1</td>
             </tr>
-            <!-- Hidden details row that appears below the clicked row -->
             <tr class="test-details">
                 <td colspan="2">
                     
@@ -126,11 +131,10 @@
                 </td>
             </tr>
             
-            <tr class="not-all-passed" onclick="toggleDetails(this)">
+            <tr onclick="toggleDetails(this)">
                 <td>connection_encrypted</td>
-                <td>0/1</td>
+                <td class="not-all-passed">0/1</td>
             </tr>
-            <!-- Hidden details row that appears below the clicked row -->
             <tr class="test-details">
                 <td colspan="2">
                     
@@ -140,64 +144,62 @@
                 </td>
             </tr>
             
-            <tr class="all-passed" onclick="toggleDetails(this)">
+            <tr onclick="toggleDetails(this)">
                 <td>dos_attack_test</td>
-                <td>14/14</td>
+                <td class="all-passed">14/14</td>
             </tr>
-            <!-- Hidden details row that appears below the clicked row -->
             <tr class="test-details">
                 <td colspan="2">
                     
                         <strong>Endpoint:</strong> /createdb<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.0950182409997069s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.10273159199982729s.<br><br>
                     
                         <strong>Endpoint:</strong> /<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.003197620999344508s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004260563000116235s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.003868369001793326s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.005348924999907467s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/_debug<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004459498999494826s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004632838000134143s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/register<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004936576000545756s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.006936273999826881s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/login<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004702108999481425s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.007081127999981618s.<br><br>
                     
                         <strong>Endpoint:</strong> /me<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.0029694629993173294s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004394806999926004s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.003897896000125911s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.00461399400001028s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004033895998873049s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004948550999870349s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/email<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.003471424999588635s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004476782999972784s.<br><br>
                     
                         <strong>Endpoint:</strong> /users/v1/{username}/password<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.00315080600012152s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004036353999936182s.<br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.0056762179992801975s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.006231303000049593s.<br><br>
                     
                         <strong>Endpoint:</strong> /books/v1<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.002902046000599512s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.003896891999829677s.<br><br>
                     
                         <strong>Endpoint:</strong> /books/v1/{book_title}<br>
-                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.0032720140006858855s.<br><br>
+                        <strong>Description:</strong> dos attack test with 1000 concurrent requests. max response time was 0.004484374999947249s.<br><br>
                     
                 </td>
             </tr>
             
-            <tr class="not-all-passed" onclick="toggleDetails(this)">
+            <tr onclick="toggleDetails(this)">
                 <td>validate_endpoint_auth</td>
-                <td>8/14</td>
+                <td class="not-all-passed">8/14</td>
             </tr>
-            <!-- Hidden details row that appears below the clicked row -->
             <tr class="test-details">
                 <td colspan="2">
                     
@@ -246,11 +248,10 @@
                 </td>
             </tr>
             
-            <tr class="not-all-passed" onclick="toggleDetails(this)">
+            <tr onclick="toggleDetails(this)">
                 <td>status_code_analysis</td>
-                <td>11/21</td>
+                <td class="not-all-passed">11/21</td>
             </tr>
-            <!-- Hidden details row that appears below the clicked row -->
             <tr class="test-details">
                 <td colspan="2">
                     
@@ -320,11 +321,10 @@
                 </td>
             </tr>
             
-            <tr class="not-all-passed" onclick="toggleDetails(this)">
+            <tr onclick="toggleDetails(this)">
                 <td>sql_injection</td>
-                <td>12/14</td>
+                <td class="not-all-passed">12/14</td>
             </tr>
-            <!-- Hidden details row that appears below the clicked row -->
             <tr class="test-details">
                 <td colspan="2">
                     
@@ -373,11 +373,10 @@
                 </td>
             </tr>
             
-            <tr class="not-all-passed" onclick="toggleDetails(this)">
+            <tr onclick="toggleDetails(this)">
                 <td>file_limits</td>
-                <td>0/3</td>
+                <td class="not-all-passed">0/3</td>
             </tr>
-            <!-- Hidden details row that appears below the clicked row -->
             <tr class="test-details">
                 <td colspan="2">
                     

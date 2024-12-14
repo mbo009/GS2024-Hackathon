@@ -15,7 +15,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/createdb",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.0950182409997069s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.10273159199982729s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -39,7 +39,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.003197620999344508s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004260563000116235s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -63,7 +63,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.003868369001793326s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.005348924999907467s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -87,7 +87,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1/_debug",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004459498999494826s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004632838000134143s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -111,7 +111,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1/register",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004936576000545756s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.006936273999826881s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -135,7 +135,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1/login",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004702108999481425s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.007081127999981618s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -159,7 +159,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/me",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.0029694629993173294s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004394806999926004s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -189,7 +189,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1/{username}",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.003897896000125911s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.00461399400001028s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -219,7 +219,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1/{username}",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004033895998873049s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004948550999870349s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -255,7 +255,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1/{username}/email",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.003471424999588635s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004476782999972784s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -291,7 +291,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/users/v1/{username}/password",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.00315080600012152s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004036353999936182s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -327,7 +327,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/books/v1",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.0056762179992801975s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.006231303000049593s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -351,7 +351,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/books/v1",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.002902046000599512s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.003896891999829677s."
     },
     {
         "testType": "validate_endpoint_auth",
@@ -375,7 +375,7 @@
         "testType": "dos_attack_test",
         "passed": true,
         "endpoint": "/books/v1/{book_title}",
-        "description": "dos attack test with 1000 concurrent requests. max response time was 0.0032720140006858855s."
+        "description": "dos attack test with 1000 concurrent requests. max response time was 0.004484374999947249s."
     },
     {
         "testType": "validate_endpoint_auth",

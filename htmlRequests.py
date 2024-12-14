@@ -44,29 +44,29 @@ class HtmlRequests:
 
     def run(self, request, is_endpoint_secured=True):
         outputs = []
-        # cmd_injection(request, self.url)
-        # outputs.append(
-        #     dos(
-        #         self.url,
-        #         request,
-        #         self.dosRequestCount,
-        #         self.maxAcceptableResponseTime,
-        #     )
-        # )
-        # if check_endpoint_auth:
-        #     outputs.append(endpoint_auth(self.url, request, self.endpointsWithoutAuth))
-        # if request["method"].lower() != "post":
-        #     outputs.append(
-        #         error_codes(
-        #             self.url,
-        #             request,
-        #             self.statusCodeValidation,
-        #             is_endpoint_secured,
-        #             self.token,
-        #         )
-        #     )
-        # if request["method"].lower() == "post":
-        #     outputs.append(file_limits(request))
+        cmd_injection(request, self.url)
+        outputs.append(
+            dos(
+                self.url,
+                request,
+                self.dosRequestCount,
+                self.maxAcceptableResponseTime,
+            )
+        )
+        if is_endpoint_secured:
+            outputs.append(endpoint_auth(self.url, request, self.endpointsWithoutAuth))
+        if request["method"].lower() != "post":
+            outputs.append(
+                error_codes(
+                    self.url,
+                    request,
+                    self.statusCodeValidation,
+                    is_endpoint_secured,
+                    self.token,
+                )
+            )
+        if request["method"].lower() == "post":
+            outputs.append(file_limits(request))
         outputs.append(
             sql_injection(request, self.url, self.token, is_endpoint_secured)
         )

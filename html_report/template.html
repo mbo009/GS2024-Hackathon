@@ -38,10 +38,6 @@
             font-weight: bold;
         }
 
-        /* tr:nth-child(even) {
-            background-color: #21262d;
-        } */
-
         tr:hover {
             background-color: #30363d;
         }
@@ -69,22 +65,36 @@
             font-weight: bold;
         }
 
-        /* Hidden Details */
+        /* Styling for hidden details */
         .test-details {
-            display: none;
-            padding: 10px;
             background-color: #2d333b;
             color: #58a6ff;
-            border: 1px solid #30363d;
+            padding: 15px;
+            font-size: 14px;
+            display: none;
+            text-align: left;
+        }
+
+        .test-details td {
+            padding-left: 30px; /* Indentation to make it look like nested content */
+        }
+
+        .test-details strong {
+            color: #c9d1d9;
+        }
+
+        /* Ensuring smooth toggling */
+        tr {
+            cursor: pointer;
         }
     </style>
     <script>
         function toggleDetails(row) {
-            var details = row.querySelector('.test-details');
+            var details = row.nextElementSibling; // Get the next sibling (the details row)
             if (details.style.display === 'none' || details.style.display === '') {
-                details.style.display = 'block';
+                details.style.display = 'table-row'; // Display the details as a row
             } else {
-                details.style.display = 'none';
+                details.style.display = 'none'; // Hide the details
             }
         }
     </script>
@@ -105,8 +115,10 @@
             <tr class="{% if testsPassed == testsTotal %}all-passed{% else %}not-all-passed{% endif %}" onclick="toggleDetails(this)">
                 <td>{{ name }}</td>
                 <td>{{ testsPassed }}/{{ testsTotal }}</td>
-                <!-- Hidden details that will toggle when clicked -->
-                <td class="test-details">
+            </tr>
+            <!-- Hidden details row that appears below the clicked row -->
+            <tr class="test-details">
+                <td colspan="2">
                     {% for endpoint, description in details %}
                         <strong>Endpoint:</strong> {{ endpoint }}<br>
                         <strong>Description:</strong> {{ description }}<br><br>

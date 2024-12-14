@@ -30,8 +30,7 @@ def group_tests(tests):
     ]
 
 
-def generate_html(data, template_path, output_path):
-    print(data)
+def generate(data, template_path, output_path):
     with open(template_path, "r") as fh:
         template = Template(fh.read())
 
@@ -41,7 +40,7 @@ def generate_html(data, template_path, output_path):
         fh.write(html_content)
 
 
-if __name__ == "__main__":
-    json_data = load_json("exampleReport.json")
+def generate_html():
+    json_data = load_json("report.json")
     grouped_data = group_tests(json_data)
-    generate_html(grouped_data, "template.html", "generatedReport.html")
+    generate(grouped_data, "html_report/template.html", "generatedReport.html")

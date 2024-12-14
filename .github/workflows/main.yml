@@ -34,7 +34,7 @@ jobs:
 
     # Step 4: Run Docker Compose Services
     - name: Run Docker Compose Services
-      working-directory: ./vulnerableAPI  # Ensure the compose file is in the 'via' folder
+      working-directory: /vulnerableAPI  # Ensure the compose file is in the 'via' folder
       run: |
         docker-compose up -d
 

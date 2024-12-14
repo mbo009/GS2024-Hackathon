@@ -58,4 +58,4 @@ jobs:
         echo "Stopping and removing all containers..."
         docker stop python-app-container || true
         docker rm python-app-container || true
-        docker-compose -f /vulnerableAPI/docker-compose.yml down
+        docker-compose -f ./vulnerableAPI/docker-compose.yml down
